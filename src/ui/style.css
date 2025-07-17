@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+  background-color: #282828;
+}
+
+.banner {
+  font-family: 'JetBrains Mono', monospace;
+  border-bottom: 1px solid #665c54;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+h1 {
+  color: #fabd2f;
+  font-size: 24px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+p {
+  color: #b8bb26;
+  font-size: 13px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Core layout */
+body, html {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #282828;
+}
+
+.container {
+  display: flex;
+  height: 89vh;
+}
+
+/* Left: Canvas */
+.canvas-pane {
+  width: 50%;
+  min-height: 150px; /* New minimum height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #665c54;
+  border-bottom: 1px solid #665c54;
+}
+
+/* Right: Terminal */
+.terminal-pane {
+  width: 50%;
+  overflow-y: auto;
+  padding: 1rem;
+  color: #ebdbb2;
+  font-family: monospace;
+  border-bottom: 1px solid #665c54;
+}
+
+/* Canvas styling */
+#soundwave {
+  width: 200px;
+  height: 100px;
+  display: block;
+}
+
+/* Glow effects (unchanged) */
+.canvas-pane::after {
+  box-shadow: 0 0 3px rgba(215, 153, 33, 0.7);
+}
+
+.container::before {
+  box-shadow: 0 0 3px rgba(215, 153, 33, 0.7);
+}
+
+.command-line
+{
+    color: #b8bb26;
+    font-size: 15px;
+}
+
+/* Blinking cursor styles */
+.cursor-blink {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1rem;
+  background-color: #ebdbb2; /* Gruvbox light1 */
+  margin-left: 0.25rem;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
